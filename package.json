@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/app.ts",
   "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,9 +15,11 @@
     "express": "^4.17.1",
     "prisma": "^3.3.0",
     "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.4"
   },
   "dependencies": {
+    "axios": "^0.23.0",
     "dotenv": "^10.0.0"
   }
 }

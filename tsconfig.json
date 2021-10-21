@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+   "target": "es2017",                       
+    "module": "commonjs",                    
+    "strict": false,                         
+    "esModuleInterop": true,                 
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@controllers/*": ["./src/controllers/*"],
+      "@services/*": ["./src/services/*"],
+    }
+  }
+}

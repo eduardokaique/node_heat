@@ -1,4 +1,6 @@
+import { AuthenticateUserService } from "@services/AuthenticateUserService";
 import { Request, Response } from  "express";
+
 
 class AuthenticateUserController {
     async handle(request: Request, response: Response) {
@@ -8,7 +10,6 @@ class AuthenticateUserController {
         const result = await service.execute(code);
 
         return response.json(result);
-
     }
 }
 

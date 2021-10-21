@@ -1,7 +1,8 @@
 import axios from "axios";
+import https from "https";
 
 class AuthenticateUserService {
-    async execite(code: string) {
+    async execute(code: string) {
         const url = "https://github.com.br/login/oauth/access_token"
 
         const response = await axios.post(url, null, {
@@ -12,9 +13,14 @@ class AuthenticateUserService {
             },
             headers: {
                 "Accept":"application/json"
-            }
-        })
+            },
+            httpsAgent: new https.Agent({  
+                rejectUnauthorized: false
+              })
+        });
 
         return response.data;
     }
 }
+
+export { AuthenticateUserService }
