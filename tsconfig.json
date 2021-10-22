@@ -9,6 +9,7 @@
     "paths": {
       "@controllers/*": ["./src/controllers/*"],
       "@services/*": ["./src/services/*"],
-    }
+    },
+    "typeRoots": ["./src/@types", "node_modules/@types"]
   }
 }
